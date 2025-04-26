@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+
 import { NavLink } from 'react-router-dom';
+import { FaHome, FaInfoCircle, FaGlobe, FaPhone } from 'react-icons/fa';
 import '../../App.css';
 
 const Header = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    // const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
+    // const toggleMenu = () => {
+    //     setIsMenuOpen(!isMenuOpen);
+    // };
 
     return (
         <header className="Header bg-dark text-white">
@@ -17,20 +18,40 @@ const Header = () => {
                 </NavLink>
             </div>
 
-            <nav className={`nav ${isMenuOpen ? 'active' : ''}`}>
-                <ul>
-                    <li><NavLink to="/" className="NavLink">Home</NavLink></li>
-                    <li><NavLink to="/about" className="NavLink">About</NavLink></li>
-                    <li><NavLink to="/country" className="NavLink">Country</NavLink></li>
-                    <li><NavLink to="/contact" className="NavLink">Contact</NavLink></li>
+            <nav className="nav-container">
+                <ul className="nav-list d-flex gap-3 align-items-center ">
+                    <li>
+                        <NavLink to="/" className="NavLink">
+                            <span className="iconof"><FaHome /></span>
+                            <span className="textof">Home</span>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/about" className="NavLink">
+                            <span className="iconof"><FaInfoCircle /></span>
+                            <span className="textof">About</span>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/country" className="NavLink">
+                            <span className="iconof"><FaGlobe /></span>
+                            <span className="textof">Country</span>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/contact" className="NavLink">
+                            <span className="iconof"><FaPhone /></span>
+                            <span className="textof">Contact</span>
+                        </NavLink>
+                    </li>
                 </ul>
             </nav>
 
-            <div className="hamburger" onClick={toggleMenu}>
+            {/* <div className="hamburger" onClick={toggleMenu}>
                 <div className="line"></div>
                 <div className="line"></div>
                 <div className="line"></div>
-            </div>
+            </div> */}
         </header>
     );
 };

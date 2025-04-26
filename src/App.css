@@ -132,5 +132,26 @@ li {
     pointer-events: none;
   }
 
+  /* Pehle normal screen ke liye (desktop view) */
+.iconof {
+    display: none; /* Icon chhupa hua rahe desktop pe */
+  }
+  
+  .textof {
+    display: inline; /* Text visible rahe desktop pe */
+  }
+  
+  /* Jab screen chhoti ho (mobile view) */
+  @media (max-width: 768px) {
+    .iconof {
+      display: inline; /* Icon visible ho jaaye mobile pe */
+      font-size: 20px; /* Thoda bada kar diya icons ko */
+      margin-right: 5px; /* Thoda gap mile icons ke baad */
+    }
+    
+    .textof {
+      display: none; /* Text chhupa do mobile pe */
+    }
+  }
   
   
