@@ -26,7 +26,11 @@ const Country = () => {
 
   console.log(datas);
 
-  if (isPending || datas.length === 0) return <h1>Loading...</h1>;
+  if (isPending || datas.length === 0) return <><div className="text-center">
+  <div className="spinner-border" role="status">
+    <span className="visually-hidden">Loading...</span>
+  </div>
+</div></>
   console.log(datas);
 
 // here we are filtering the data based on the search and filter value

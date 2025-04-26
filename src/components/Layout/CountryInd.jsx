@@ -23,7 +23,16 @@ const CountryInd = () => {
 
   // Log the data to see the structure
 
-  if (isPending || !datas) return <span className="loader"></span>
+  if (isPending || !datas) return <>
+  
+  <div className="text-center">
+  <div className="spinner-border" role="status">
+    <span className="visually-hidden">Loading...</span>
+  </div>
+</div>
+  
+  
+  </>
   else  console.log(datas[0].flags.png); // Safe loading
 
   return  <>

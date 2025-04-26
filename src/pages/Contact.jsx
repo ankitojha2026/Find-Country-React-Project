@@ -8,7 +8,7 @@ const Contact = () => {
 
 
   const handleSubmit = (formData) => {
-    formData.preventDefault();
+    // formData.preventDefault(); // Prevent the default form submission behavior
     formData = new FormData(formData.target);
     const formdetails = Object.fromEntries(formData.entries());
     console.log(formdetails);
