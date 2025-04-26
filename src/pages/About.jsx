@@ -2,6 +2,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import countryData from "../API/countryData.JSON";
 import { HiArrowSmRight } from "react-icons/hi";
+import { NavLink } from 'react-router-dom';
 
 const About = () => {
     return (
@@ -17,7 +18,7 @@ const About = () => {
                     <h6 className="card-subtitle mb-2 text-body-secondary">Population: {country.population}</h6>
                     <h6 className="card-subtitle mb-2 text-body-secondary">Area: {country.area}</h6>
                     <p className="card-text">About: {country.historicalFacts}</p>
-                    <button className="btn mt-3 p-1 btn-primary btn-lg ">See More <HiArrowSmRight /></button>
+                   <NavLink to="/country"><button className="btn mt-3 p-1 btn-primary btn-lg ">See More <HiArrowSmRight /></button></NavLink> 
                 </div>
             </div>
         ))}
