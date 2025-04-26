@@ -24,6 +24,13 @@ const Country = () => {
 
   return (
     <>
+
+
+
+    <div className="fs-"><center><h1>All Countries</h1></center></div>
+
+
+
     <div className="d-flex flex-wrap justify-content-center gap-3 px-3">
      {datas.map((country, index) => (
         <div className="card" style={{ width: "18rem", margin: "10px" }} key={index}>
