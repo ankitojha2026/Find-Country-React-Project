@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <>
       <div className="container my-5">
-        <div className="card text-center mx-auto" style={{ width: "100%" , maxWidth:"35rem"}}>
+        <div className="card text-center mx-auto" style={{width: "100%" , maxWidth:"35rem"}}>
           <div className="card-body">
             <h1 style={{ fontFamily: "sans-serif" }}>Contact Us</h1>
             <form onSubmit={handleSubmit}>
