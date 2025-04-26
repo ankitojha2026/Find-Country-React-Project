@@ -15,7 +15,6 @@ import CountryInd from './components/Layout/CountryInd';
 // here i'm using react-router-dom 
 // and createBrowserRouter to create a router
 const rounter = createBrowserRouter([
-
     {
         // here i'm creating a route for the app
         // and i'm using the path parameter to create a route

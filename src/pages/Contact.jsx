@@ -1,15 +1,27 @@
+import { HiChevronLeft } from "react-icons/hi";
+import { NavLink } from "react-router-dom";
+
 const Contact = () => {
+
+
+
+
+
   const handleSubmit = (formData) => {
     formData.preventDefault();
     formData = new FormData(formData.target);
     const formdetails = Object.fromEntries(formData.entries());
     console.log(formdetails);
+    {alert(" ✅ Your message has been sent successfully!")}
+
+
+
   };
 
   return (
     <>
-      <div className="container my-5">
-        <div className="card text-center mx-auto" style={{width: "100%" , maxWidth:"35rem"}}>
+      <div className="container my-5  ">
+        <div className="card text-center mx-auto shadow p-3 mb-5 bg-body-yellow rounded" style={{width: "100%" , maxWidth:"35rem"}}>
           <div className="card-body">
             <h1 style={{ fontFamily: "sans-serif" }}>Contact Us</h1>
             <form onSubmit={handleSubmit}>
@@ -21,6 +33,9 @@ const Contact = () => {
                   placeholder="Enter Your Name"
                   required
                   name="userName"
+                  autoCorrect="off"
+                  autoComplete="off"
+
                 />
               </div>
               <div className="mb-3">
@@ -50,7 +65,12 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <NavLink to="/"><span className="btn btn-outline-secondary ms-5"> <HiChevronLeft />Back</span></NavLink>
     </>
+
+
+
+
   );
 };
 
