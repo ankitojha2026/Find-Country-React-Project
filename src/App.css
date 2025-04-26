@@ -1,0 +1,124 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #fefefe;
+    color: #1b1b1b;
+    padding-top: 70px;
+}
+
+/* Header Styles */
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    background: linear-gradient(90deg, #ffffff, #fffdfd);
+    color: rgb(0, 0, 0);
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1050;
+}
+
+.logo-container {
+    margin-left: 1rem;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+li {
+    list-style: none;
+}
+
+.NavLink {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    transition: all 0.3s ease-in-out;
+}
+
+.NavLink:hover {
+    color: #02fbf2;
+    transform: scale(1.1);
+}
+
+.NavLink.active {
+    color: #00dcf0;
+    transform: scale(1.1);
+}
+
+/* Hamburger Menu (3 dots) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hamburger .line {
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Menu */
+.nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.nav ul.hide {
+    display: none;
+}
+
+.nav.active {
+    display: block;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav ul {
+        display: none;
+    }
+
+    .nav.active ul {
+        display: block;
+        transition: opacity 0.5s ease-in-out;
+    }
+}

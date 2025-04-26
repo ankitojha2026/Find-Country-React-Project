@@ -1,0 +1,20 @@
+[
+    {
+        "icon":"MdPlace",
+        "title":"Find us",
+        "details":"1234 Lucknow,India"
+    },
+    {
+        "icon":"IoCallSharp",
+        "title":"Call us",
+        "details":"+91 1234567890"
+    },
+    {
+        "icon":"TbMailPlus",
+        "title":"Mail us",
+        "details":"FindCountry@gmail.com"
+
+    }
+    
+
+]
